@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ST10340607 Cybersecurity chatbot/1.0.0": {
+        "runtime": {
+          "ST10340607 Cybersecurity chatbot.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ST10340607 Cybersecurity chatbot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
