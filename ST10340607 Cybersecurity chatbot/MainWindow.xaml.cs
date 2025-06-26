@@ -79,70 +79,70 @@ namespace ST10340607_Cybersecurity_chatbot
                     Question = "What should you do if you receive an email asking for your password?",
                     Options = new[] { "Reply with your password", "Delete the email", "Report the email as phishing", "Ignore it" },
                     CorrectAnswer = 2,
-                    Explanation = "Correct! Reporting phishing emails helps prevent scams and protects others."
+                    Explanation = "Reporting phishing emails helps prevent scams and protects others."
                 },
                 new QuizQuestion
                 {
                     Question = "What makes a strong password?",
                     Options = new[] { "Your birthday", "At least 12 characters with mixed types", "Your pet's name", "123456" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! Strong passwords should be at least 12 characters with uppercase, lowercase, numbers, and symbols."
+                    Explanation = "Strong passwords should be at least 12 characters with uppercase, lowercase, numbers, and symbols."
                 },
                 new QuizQuestion
                 {
                     Question = "What is two-factor authentication (2FA)?",
                     Options = new[] { "Using two passwords", "An extra security layer beyond passwords", "Having two email accounts", "Logging in twice" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! 2FA adds an extra security layer, typically requiring something you know and something you have."
+                    Explanation = "2FA adds an extra security layer, typically requiring something you know and something you have."
                 },
                 new QuizQuestion
                 {
                     Question = "Which of these is a sign of a phishing email?",
                     Options = new[] { "Perfect grammar", "Urgent threats", "Personalized greeting", "Expected content" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! Phishing emails often use urgent language to pressure you into quick action."
+                    Explanation = "Phishing emails often use urgent language to pressure you into quick action."
                 },
                 new QuizQuestion
                 {
                     Question = "What should you do on public WiFi?",
                     Options = new[] { "Use it for banking", "Use a VPN", "Share passwords", "Download software" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! VPNs encrypt your connection, protecting your data on public networks."
+                    Explanation = "VPNs encrypt your connection, protecting your data on public networks."
                 },
                 new QuizQuestion
                 {
                     Question = "How often should you update your software?",
                     Options = new[] { "Never", "Only when it breaks", "Regularly with security patches", "Once a year" },
                     CorrectAnswer = 2,
-                    Explanation = "Correct! Regular updates patch security vulnerabilities and keep you protected."
+                    Explanation = "Regular updates patch security vulnerabilities and keep you protected."
                 },
                 new QuizQuestion
                 {
                     Question = "What is malware?",
                     Options = new[] { "Good software", "Malicious software", "Email software", "Gaming software" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! Malware is malicious software designed to damage or gain unauthorized access to systems."
+                    Explanation = "Malware is malicious software designed to damage or gain unauthorized access to systems."
                 },
                 new QuizQuestion
                 {
                     Question = "True or False: It's safe to click links in unexpected emails.",
                     Options = new[] { "True", "False" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! Never click links in unexpected emails as they may lead to malicious websites."
+                    Explanation = "Never click links in unexpected emails as they may lead to malicious websites."
                 },
                 new QuizQuestion
                 {
                     Question = "What is the best way to backup important data?",
                     Options = new[] { "Never backup", "Only on your computer", "Use the 3-2-1 rule", "Email to yourself" },
                     CorrectAnswer = 2,
-                    Explanation = "Correct! The 3-2-1 rule: 3 copies of data, 2 different media types, 1 offsite backup."
+                    Explanation = "The 3-2-1 rule: 3 copies of data, 2 different media types, 1 offsite backup."
                 },
                 new QuizQuestion
                 {
                     Question = "What should you do if you suspect malware on your device?",
                     Options = new[] { "Ignore it", "Disconnect from internet and scan", "Continue using normally", "Share files with others" },
                     CorrectAnswer = 1,
-                    Explanation = "Correct! Disconnect from internet to prevent data theft and run a full system scan."
+                    Explanation = "Disconnect from internet to prevent data theft and run a full system scan."
                 }
             };
         }
@@ -747,12 +747,12 @@ namespace ST10340607_Cybersecurity_chatbot
             {
                 score++;
                 FeedbackText.Text = "Thats correct " + question.Explanation;
-                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(76, 175, 80)); // Green
+                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(76, 175, 80)); 
             }
             else
             {
-                FeedbackText.Text = "That incorrect" + question.Explanation;
-                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(255, 107, 107)); // Red
+                FeedbackText.Text = "That incorrect " + question.Explanation;
+                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(255, 107, 107)); 
             }
 
             FeedbackText.Visibility = Visibility.Visible;

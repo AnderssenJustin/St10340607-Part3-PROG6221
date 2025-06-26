@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|c:\\users\\lab_services_student\\desktop\\st10340607-part3-prog6221\\st10340607 cybersecurity chatbot\\cybersecuritychatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|solutionrelative:cybersecuritychatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|c:\\users\\lab_services_student\\desktop\\st10340607-part3-prog6221\\st10340607 cybersecurity chatbot\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|c:\\users\\lab_services_student\\desktop\\st10340607-part3-prog6221\\st10340607 cybersecurity chatbot\\cybersecuritychatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|solutionrelative:cybersecuritychatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F29B7990-B1FC-48AE-AB0E-FACA131684EA}|ST10340607 Cybersecurity chatbot.csproj|c:\\users\\lab_services_student\\desktop\\st10340607-part3-prog6221\\st10340607 cybersecurity chatbot\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -22,19 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAEwDAAAAAAAAAAAwwEQDAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAN0CAAAAAAAAAAAQwPECAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T08:38:38.789Z"
+              "WhenOpened": "2025-06-23T08:38:38.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -49,16 +50,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cybersecuritychatbot.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\Cybersecuritychatbot.cs",
               "RelativeDocumentMoniker": "Cybersecuritychatbot.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\Cybersecuritychatbot.cs",
               "RelativeToolTip": "Cybersecuritychatbot.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAJABAAAAAAAAAAAwwCMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T10:15:57.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T10:15:57.409Z"
             }
           ]
         }
