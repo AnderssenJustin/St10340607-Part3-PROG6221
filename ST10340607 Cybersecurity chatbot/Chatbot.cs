@@ -8,8 +8,8 @@ namespace ST10340607_Cybersecurity_chatbot
 {
     public abstract class Chatbot
     {
-        
-        
+
+
 
         // Optional: user interest memory (can be overridden)
         public virtual void userInterest(string topic) { }

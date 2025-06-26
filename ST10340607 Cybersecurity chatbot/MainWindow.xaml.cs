@@ -29,7 +29,7 @@ namespace ST10340607_Cybersecurity_chatbot
         {
             InitializeComponent();
             InitializeApplication();
-            UserInput.IsEnabled = false; 
+            UserInput.IsEnabled = false;
             SendButton.IsEnabled = false;
         }
 
@@ -61,13 +61,13 @@ namespace ST10340607_Cybersecurity_chatbot
         }
         private void PlayStartupVoice()// method to play the voice on start up 
         {
-           
-                    string audioFilePath = @"C:\Users\lab_services_student\Desktop\PROG6221-POE\1744782720344369660p9a3uycs-voicemaker.in-speech.wav";
-                    
-                        SoundPlayer player = new SoundPlayer(audioFilePath);
-                        player.Play();
-                    
-            
+
+            string audioFilePath = @"C:\Users\lab_services_student\Desktop\PROG6221-POE\1744782720344369660p9a3uycs-voicemaker.in-speech.wav";
+
+            SoundPlayer player = new SoundPlayer(audioFilePath);
+            player.Play();
+
+
         }
 
         private void InitializeQuizQuestions()// this method is where the questions are stored for the game as well as the correct answer for the question that the user must slect 
@@ -160,7 +160,7 @@ namespace ST10340607_Cybersecurity_chatbot
             chatbot.SetUserName(name);
             //WelcomeText.Text = $"Welcome {name}! I'm here to help with cybersecurity questions.";
 
-            
+
             UserInput.IsEnabled = true;
             SendButton.IsEnabled = true;
             TaskManagerButton.IsEnabled = true;
@@ -170,8 +170,8 @@ namespace ST10340607_Cybersecurity_chatbot
             chatbotUserName = name;
             chatbot.SetUserName(name);
 
-           
-            UserInput.Focus(); 
+
+            UserInput.Focus();
             Keyboard.Focus(UserInput);
 
             AddToChatDisplay($"Welcome {name}! I'm your cybersecurity assistant.", "#4CAF50");
@@ -189,8 +189,8 @@ namespace ST10340607_Cybersecurity_chatbot
             if (string.IsNullOrWhiteSpace(textToProcess))
                 return;
 
-            UserInput.Text = textToProcess; 
-            ProcessUserInput(); 
+            UserInput.Text = textToProcess;
+            ProcessUserInput();
             UserInput.Clear();
             UserInput.Focus();
         }
@@ -199,7 +199,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
         private void SendButton_Click(object sender, RoutedEventArgs e)// method run when user clicks send in the chat bot 
         {
-            SubmitInput(UserInput.Text); 
+            SubmitInput(UserInput.Text);
         }
 
         private void UserInput_KeyDown(object sender, KeyEventArgs e)
@@ -219,7 +219,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
             AddToChatDisplay($"You: {input}", "#2196F3");
 
-            await ProcessWithNLP(input);  
+            await ProcessWithNLP(input);
 
             UserInput.Clear();
             UserInput.Focus();
@@ -233,7 +233,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
             string lowerInput = input.ToLower();
 
-          
+
             if (ContainsTaskIndicators(lowerInput) && !IsExplicitQuestion(lowerInput))
             {
                 HandleImplicitTaskCommand(input);
@@ -287,7 +287,7 @@ namespace ST10340607_Cybersecurity_chatbot
             AddToChatDisplay($"Bot: It sounds like you want to create a task. Should I add: '{input}'?", "#4CAF50");
             AddToChatDisplay("Bot: Type 'yes' to confirm, or rephrase as 'Add task [description]'", "#B0B0B0");
 
-            
+
         }
         // the methods below are for the nlp to allow the user to type their input in diffrent ways and the chatbot will understand. 
         private bool IsTaskCommand(string input)
@@ -354,7 +354,7 @@ namespace ST10340607_Cybersecurity_chatbot
         {
             string lowerInput = input.ToLower();
 
-            
+
             var patterns = new[]
             {
         @"add task\s+(.+)",
@@ -374,18 +374,18 @@ namespace ST10340607_Cybersecurity_chatbot
                 if (match.Success)
                 {
                     string description = match.Groups[1].Value.Trim();
-                    
+
                     description = Regex.Replace(description, @"\s+(in \d+ days?|tomorrow|next week|today)$", "", RegexOptions.IgnoreCase).Trim();
 
                     if (!string.IsNullOrWhiteSpace(description))
                     {
-                        
+
                         return char.ToUpper(description[0]) + description.Substring(1);
                     }
                 }
             }
 
-            
+
             var simplePatterns = new[] { "task", "reminder", "todo", "to do" };
             foreach (var keyword in simplePatterns)
             {
@@ -405,7 +405,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
         private int ExtractReminderDays(string input)// method to look if the user enters when they would like the reminder 
         {
-            
+
             Match match = Regex.Match(input, @"in (\d+) days?", RegexOptions.IgnoreCase);
             if (match.Success && int.TryParse(match.Groups[1].Value, out int days))
             {
@@ -417,7 +417,7 @@ namespace ST10340607_Cybersecurity_chatbot
             if (input.ToLower().Contains("next week"))
                 return 7;
 
-            return 7; 
+            return 7;
         }
 
         private void HandleMemoryCommand(string input)
@@ -429,7 +429,7 @@ namespace ST10340607_Cybersecurity_chatbot
             }
             else
             {
-                
+
                 AddToChatDisplay("Bot: Here's what I remember about you:", "#4CAF50");
                 AddToChatDisplay($"- Your name and our conversation history", "#B0B0B0");
                 AddToChatDisplay($"- {tasks.Count} tasks you've created", "#B0B0B0");
@@ -530,10 +530,10 @@ namespace ST10340607_Cybersecurity_chatbot
             }
         }*/
 
-       /* private string GetRandomResponse(string[] responses)
-        {
-            return responses[random.Next(responses.Length)];
-        }*/
+        /* private string GetRandomResponse(string[] responses)
+         {
+             return responses[random.Next(responses.Length)];
+         }*/
 
         private void AddToChatDisplay(string message, string color)
         {
@@ -542,7 +542,7 @@ namespace ST10340607_Cybersecurity_chatbot
                 var timestamp = DateTime.Now.ToString("HH:mm:ss");
                 var formattedMessage = $"[{timestamp}] {message}";
 
-                
+
                 var textBlock = new TextBlock
                 {
                     Text = formattedMessage,
@@ -553,7 +553,7 @@ namespace ST10340607_Cybersecurity_chatbot
                     FontSize = 12
                 };
 
-                
+
                 if (ChatDisplay.Parent is ScrollViewer scrollViewer &&
                     scrollViewer.Content is StackPanel stackPanel)
                 {
@@ -561,7 +561,7 @@ namespace ST10340607_Cybersecurity_chatbot
                 }
                 else
                 {
-                   
+
                     ChatDisplay.Text += formattedMessage + "\n";
                 }
 
@@ -574,14 +574,14 @@ namespace ST10340607_Cybersecurity_chatbot
             string logEntry = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {activity}";
             activityLog.Add(logEntry);
 
-            
+
             if (activityLog.Count > 50)
             {
                 activityLog.RemoveAt(0);
             }
         }
 
-        
+
         private void TaskManagerButton_Click(object sender, RoutedEventArgs e)// this handles when the task manager button is clicked on the screen 
         {
             TaskManagerOverlay.Visibility = Visibility.Visible;
@@ -620,7 +620,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
             tasks.Add(newTask);
 
-            
+
             TaskTitleInput.Clear();
             TaskDescriptionInput.Clear();
             ReminderDaysInput.Text = "7";
@@ -648,7 +648,7 @@ namespace ST10340607_Cybersecurity_chatbot
 
                 MessageBox.Show($"Task '{selectedTask.Title}' marked as completed!", "Task Completed", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                
+
                 TaskListBox.Items.Refresh();
             }
         }
@@ -714,7 +714,7 @@ namespace ST10340607_Cybersecurity_chatbot
                 AnswerC.Visibility = question.Options.Length > 2 ? Visibility.Visible : Visibility.Collapsed;
                 AnswerD.Visibility = question.Options.Length > 3 ? Visibility.Visible : Visibility.Collapsed;
 
-                
+
                 AnswerA.IsChecked = false;
                 AnswerB.IsChecked = false;
                 AnswerC.IsChecked = false;
@@ -751,7 +751,7 @@ namespace ST10340607_Cybersecurity_chatbot
             }
             else
             {
-                FeedbackText.Text = "That incorrect"+question.Explanation;
+                FeedbackText.Text = "That incorrect" + question.Explanation;
                 FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(255, 107, 107)); // Red
             }
 
@@ -834,7 +834,7 @@ namespace ST10340607_Cybersecurity_chatbot
             QuizOverlay.Visibility = Visibility.Collapsed;
         }
 
-        
+
         private void ActivityLogButton_Click(object sender, RoutedEventArgs e)
         {
             ShowActivityLogDialog();
@@ -875,7 +875,7 @@ namespace ST10340607_Cybersecurity_chatbot
             }
         }
 
-        
+
     }
 
 

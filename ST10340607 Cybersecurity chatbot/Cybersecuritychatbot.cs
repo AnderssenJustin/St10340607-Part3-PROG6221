@@ -82,23 +82,23 @@ namespace ST10340607_Cybersecurity_chatbot
         {
             usersName = name;
             userMemory["name"] = name;
-           // SendMessage($"Hello {name}! How can I help with cybersecurity today?");
+            // SendMessage($"Hello {name}! How can I help with cybersecurity today?");
         }
         public bool TryHandleTaskCommand(string input, out string taskDescription)
         {
             taskDescription = string.Empty;
 
-            
+
             string lowerInput = input.ToLower().Trim();
 
-            
+
             if (lowerInput.Contains("add task") ||
                 lowerInput.Contains("create task") ||
                 lowerInput.Contains("remind me") ||
                 lowerInput.Contains("set reminder") ||
                 lowerInput.StartsWith("task "))
             {
-                
+
                 if (lowerInput.Contains("add task"))
                     taskDescription = input.Substring(input.IndexOf("add task") + 8).Trim();
                 else if (lowerInput.Contains("create task"))
@@ -110,7 +110,7 @@ namespace ST10340607_Cybersecurity_chatbot
                 else if (lowerInput.StartsWith("task "))
                     taskDescription = input.Substring(5).Trim();
 
-                
+
                 taskDescription = taskDescription.TrimEnd('.', '!', '?');
 
                 return !string.IsNullOrWhiteSpace(taskDescription);
@@ -119,12 +119,12 @@ namespace ST10340607_Cybersecurity_chatbot
             return false;
         }
 
-        
+
         public bool TryHandleQuizCommand(string input)
         {
             string lowerInput = input.ToLower();
 
-            
+
             return Regex.IsMatch(lowerInput, @"^(start|begin|take|launch)\s+(quiz|test)\b") ||
                    (Regex.IsMatch(lowerInput, @"\b(quiz|test)\b") &&
                    !Regex.IsMatch(lowerInput, @"\b(task|reminder|todo|add|create)\b"));
@@ -181,8 +181,8 @@ namespace ST10340607_Cybersecurity_chatbot
 
             SendMessage(OutputRandomResponses("default"));
         }
-        
-       
+
+
         private void RespondToPassword(string topic) => RespondWithInterest(topic, "password", "Pro tip: Consider using a password manager like Bitwarden or 1Password!");
         private void RespondToPhishing(string topic) => RespondWithInterest(topic, "phishing", "Remember: When in doubt, contact the company directly!");
         private void RespondToBrowsing(string topic) => RespondWithInterest(topic, "browsing", "Did you know: Browser extensions like uBlock Origin improve security!");

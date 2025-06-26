@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lab_services_student\\source\\repos\\ST10340607 Cybersecurity chatbot\\ST10340607 Cybersecurity chatbot.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\ST10340607 Cybersecurity chatbot.csproj",
       "projectName": "ST10340607 Cybersecurity chatbot",
-      "projectPath": "C:\\Users\\lab_services_student\\source\\repos\\ST10340607 Cybersecurity chatbot\\ST10340607 Cybersecurity chatbot.csproj",
+      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\ST10340607 Cybersecurity chatbot.csproj",
       "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lab_services_student\\source\\repos\\ST10340607 Cybersecurity chatbot\\obj\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Desktop\\St10340607-Part3-PROG6221\\ST10340607 Cybersecurity chatbot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
