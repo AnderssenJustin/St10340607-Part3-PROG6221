@@ -1,0 +1,37 @@
+name: .NET CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore Dependencies
+        working-directory: ST10340607 Cybersecurity chatbot
+        run: dotnet restore
+
+      - name: Build Solution
+        working-directory: ST10340607 Cybersecurity chatbot
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Verify Code Formatting
+        working-directory: ST10340607 Cybersecurity chatbot
+        run: dotnet format "ST10340607 Cybersecurity chatbot.sln" --verify-no-changes
+
+      - name: Run Tests
+        working-directory: ST10340607 Cybersecurity chatbot
+        run: dotnet test --configuration Release --no-build
