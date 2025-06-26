@@ -747,12 +747,12 @@ namespace ST10340607_Cybersecurity_chatbot
             {
                 score++;
                 FeedbackText.Text = "Thats correct " + question.Explanation;
-                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(76, 175, 80)); 
+                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(76, 175, 80));
             }
             else
             {
                 FeedbackText.Text = "That incorrect " + question.Explanation;
-                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(255, 107, 107)); 
+                FeedbackText.Foreground = new SolidColorBrush(Color.FromRgb(255, 107, 107));
             }
 
             FeedbackText.Visibility = Visibility.Visible;
